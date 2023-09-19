@@ -24,3 +24,11 @@ Folder structure
 The web api and test folder structures are the same to give better visibility as to what is being tested.
 
 To create a new validator, add it to the Validators folder and ensure it implements the IMeterReadValidator interface. Register the validator in the DI container.  This will ensure it will be picked up by the API.
+
+## Validation classes
+Each file performs its own validation
+- MeterReadAlreadyExistsValidator - performs a check to see if there is a entity in the database which matches the model on AccountId, MeterReadDateTime and value.  Returns false (to reject) if the entry is present already
+- MeterReadHasValidCustomerAccountValidator - checks to see if the account id on the model already exists in the database.  Rejects if the account is not found
+- MeterReadIsNewerValidator - checks to see if there are any newer meter reads in the database.  Rejects if there are newer reads already stored
+- MeterReadValueValidator - checks to see if the meter read value is less than 0 (Zero) or greater than 9,9999
+
