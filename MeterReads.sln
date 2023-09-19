@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeterReads", "MeterReads\MeterReads.csproj", "{CE2B8862-8332-4127-9376-76ECBA906163}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeterReads.Tests", "MeterReads.Tests\MeterReads.Tests.csproj", "{BA78F52A-AF6B-4C9E-BC91-3E59DFFA5008}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE2B8862-8332-4127-9376-76ECBA906163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE2B8862-8332-4127-9376-76ECBA906163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE2B8862-8332-4127-9376-76ECBA906163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE2B8862-8332-4127-9376-76ECBA906163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA78F52A-AF6B-4C9E-BC91-3E59DFFA5008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA78F52A-AF6B-4C9E-BC91-3E59DFFA5008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA78F52A-AF6B-4C9E-BC91-3E59DFFA5008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA78F52A-AF6B-4C9E-BC91-3E59DFFA5008}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51B4B2D7-5248-459E-8997-2F8DEA2918D0}
+	EndGlobalSection
+EndGlobal
