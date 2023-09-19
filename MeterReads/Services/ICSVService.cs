@@ -1,6 +1,6 @@
 ﻿namespace MeterReads.Services;
 
-public interface ICSVService
+public interface ICsvService
 {
-    public IEnumerable<T> ReadCSV<T>(Stream file);
+    IEnumerable<T> ReadCsv<T>(Stream file);
 }

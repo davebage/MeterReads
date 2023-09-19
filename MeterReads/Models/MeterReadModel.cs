@@ -15,14 +15,11 @@ namespace MeterReads.Models
         public int MeterReadValue { get; set; }
 
         public MeterRead ToEntity() =>
-            new MeterRead
+            new()
             {
                 AccountId = AccountId,
                 MeterReadValue = (uint)MeterReadValue,
                 MeterReadDateTime = MeterReadingDateTime
             };
-
-        public override string ToString() => 
-            $"AccountId: {AccountId}, MeterReadDateTime: {MeterReadingDateTime}, MeterReadValue: {MeterReadValue}";
     }
 }

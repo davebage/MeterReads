@@ -1,5 +1,4 @@
-﻿using MeterReads.Entities;
-using MeterReads.Models;
+﻿using MeterReads.Models;
 
 namespace MeterReads.Validators
 {

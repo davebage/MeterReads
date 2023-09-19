@@ -4,8 +4,8 @@ namespace MeterReads.Services
 {
     public interface IMeterReadFileService
     {
-        public Task<ProcessMeterReadFileResult> ProcessMeterReadFileAsync(IFormFile file);
+        Task<ProcessMeterReadFileResult> ProcessMeterReadFileAsync(IFormFile file);
 
-        public bool ValidateMeterRead(MeterReadModel meterRead);
+        bool ValidateMeterRead(MeterReadModel meterRead);
     }
 }

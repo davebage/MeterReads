@@ -3,9 +3,9 @@ using CsvHelper;
 
 namespace MeterReads.Services;
 
-public class CsvService : ICSVService
+public class CsvService : ICsvService
 {
-    public IEnumerable<T> ReadCSV<T>(Stream file)
+    public IEnumerable<T> ReadCsv<T>(Stream file)
     {
         var reader = new StreamReader(file);
         var csv = new CsvReader(reader, CultureInfo.GetCultureInfo("en-GB"));

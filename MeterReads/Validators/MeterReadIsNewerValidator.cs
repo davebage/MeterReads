@@ -5,7 +5,7 @@ namespace MeterReads.Validators;
 
 public class MeterReadIsNewerValidator : IMeterReadValidator
 {
-    private readonly DbContextClass _context;
+    readonly DbContextClass _context;
 
     public MeterReadIsNewerValidator(DbContextClass context) =>
         _context = context;

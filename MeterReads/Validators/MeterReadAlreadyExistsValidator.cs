@@ -5,7 +5,7 @@ namespace MeterReads.Validators;
 
 public class MeterReadAlreadyExistsValidator : IMeterReadValidator
 {
-    private readonly DbContextClass _context;
+    readonly DbContextClass _context;
 
     public MeterReadAlreadyExistsValidator(DbContextClass context) => _context = context;
 

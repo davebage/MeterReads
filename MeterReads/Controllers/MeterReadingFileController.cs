@@ -1,7 +1,6 @@
 using MeterReads.Models;
 using MeterReads.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Net;
 
 namespace MeterReads.Controllers;
 
@@ -16,7 +15,6 @@ public class MeterReadingFileController : ControllerBase
         _fileService = fileService;
     }
 
-
     [HttpPost]
     public async Task<ActionResult> PostSingleFile([FromForm] FileUploadModel model)
     {
@@ -26,7 +24,7 @@ public class MeterReadingFileController : ControllerBase
 
             return Ok(result);
         }
-        catch (Exception e)
+        catch (Exception)
         {
             return StatusCode(500);
         }

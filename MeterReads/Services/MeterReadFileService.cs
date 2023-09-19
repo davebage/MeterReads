@@ -7,15 +7,13 @@ namespace MeterReads.Services;
 public class MeterReadFileService : IMeterReadFileService
 {
     readonly DbContextClass _context;
-    //private ICSVService _csvService;
     readonly IEnumerable<IMeterReadValidator> _validators;
+
     public MeterReadFileService(
         DbContextClass context, 
-        //ICSVService csvService, 
         IEnumerable<IMeterReadValidator> validators)
     {
         this._context = context;
-        //_csvService = csvService;
         this._validators = validators;
     }
 
@@ -23,7 +21,7 @@ public class MeterReadFileService : IMeterReadFileService
     {
         var csvService = new CsvService();
         var result = new ProcessMeterReadFileResult();
-        foreach (var meterRead in csvService.ReadCSV<MeterReadModel>(fileData.OpenReadStream()))
+        foreach (var meterRead in csvService.ReadCsv<MeterReadModel>(fileData.OpenReadStream()))
         {
             if (ValidateMeterRead(meterRead))
             {
