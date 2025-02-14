@@ -54,9 +54,10 @@ namespace MeterReads.Tests.Services
             _context.CustomerAccounts.Add(new CustomerAccount { AccountId = 2233, FirstName = "", LastName = "" });
             _context.CustomerAccounts.Add(new CustomerAccount { AccountId = 2344, FirstName = "", LastName = "" });
             await _context.SaveChangesAsync();
+            
             var result = await _service.ProcessMeterReadFileAsync(CreateMockFormFile());
-            result.Invalid.Should().Be(0);
-            result.Valid.Should().Be(2);
+            
+            ValidateServiceResult(result,2,0);;
         }
 
         [Test]
@@ -65,6 +66,7 @@ namespace MeterReads.Tests.Services
             _context.CustomerAccounts.Add(new CustomerAccount { AccountId = 2344, FirstName = "", LastName = "" });
             await _context.SaveChangesAsync();
             var result = await _service.ProcessMeterReadFileAsync(CreateMockFormFile());
+            ValidateServiceResult(result, 1, 1);;
         }
 
         static void ValidateServiceResult(ProcessMeterReadFileResult result, int expectedValid, int expectedInvalid)
